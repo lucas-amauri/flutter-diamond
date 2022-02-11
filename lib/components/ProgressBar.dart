@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 class DiamondCircularProgressBar {
   static void create(BuildContext context) {
     showDialog(
+      barrierDismissible : false,
       context: context,
       builder: (context) {
         return new Container(
