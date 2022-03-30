@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
-class UserProfilePhoto {
+class DiamondUserProfilePhoto {
   static create({
     double radius : 50,
     String? url,
