@@ -5,10 +5,12 @@ import 'package:flutter/material.dart';
 class DiamondDialog {
   static create(BuildContext context, {
     String text : "",
-    List<Widget> actions : const []
+    List<Widget> actions : const [],
+    bool dismissable : true
   }) async {
     if (Platform.isIOS) {
       return showDialog(
+        barrierDismissible : dismissable,
         context: context, 
         builder: (BuildContext context) => CupertinoAlertDialog(
           title: Text(text),
