@@ -58,6 +58,10 @@ class DiamondFirebaseMessaging {
     FirebaseMessaging.onBackgroundMessage(onBackgroundMessage);
   }
 
+  static subscribeToTopic(String topic) {
+    FirebaseMessaging.instance.subscribeToTopic(topic);
+  }
+
   static registerToFCM({
     Function? callback
   }) async {
