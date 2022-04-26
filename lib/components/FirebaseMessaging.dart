@@ -75,7 +75,7 @@ class DiamondFirebaseMessaging {
   }
 
   static prepare(RemoteMessage message) {
-    if (prepareCallback == null) {
+    if (prepareCallback != null) {
       prepareCallback!.call();
     }
   }
