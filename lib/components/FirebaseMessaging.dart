@@ -1,15 +1,14 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
 
 class DiamondFirebaseMessaging {
-  static Function? prepareCallback;
+  static Function(RemoteMessage message)? prepareCallback;
 
-  static setPrepareCallback(Function fn) {
+  static setPrepareCallback(Function(RemoteMessage message) fn) {
     prepareCallback = fn;
   }
 
@@ -76,7 +75,7 @@ class DiamondFirebaseMessaging {
 
   static prepare(RemoteMessage message) {
     if (prepareCallback != null) {
-      prepareCallback!.call();
+      prepareCallback!.call(message);
     }
   }
 }
