@@ -4,7 +4,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class DiamondSwitch extends StatefulWidget {
-  const DiamondSwitch(this.value, this.onChanged, {Key? key}) : super(key : key);
+  const DiamondSwitch({
+    required this.value, 
+    required this.onChanged,
+    Key? key
+    }) : super(key : key);
   final bool value;
   final Function(bool?) onChanged;
 
