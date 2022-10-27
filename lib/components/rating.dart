@@ -53,10 +53,10 @@ class _DiamondRatingState extends State<DiamondRating> {
         ),
       ),
       onPressed: () {
-        widget.onSelect!.call(index+1);
+        widget.onSelect!.call(_index);
 
         setState(() {
-          rate = index;
+          rate = _index;
         });
       },
     );
