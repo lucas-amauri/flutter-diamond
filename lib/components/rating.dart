@@ -34,7 +34,7 @@ class _DiamondRatingState extends State<DiamondRating> {
 
   @override
   Widget build(BuildContext context) {
-    return new Container(
+    return new FittedBox(
       child: new Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -48,7 +48,6 @@ class _DiamondRatingState extends State<DiamondRating> {
     return IconButton(
       icon: Icon(
         Icons.star,
-        size: 30,
         color: rate == null ? Colors.grey[300] : (
           _index <= rate! ? Colors.yellow : Colors.grey[300]
         ),
