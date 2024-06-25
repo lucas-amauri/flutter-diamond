@@ -1,4 +1,4 @@
-import 'Dialog.dart';
+import 'dialog.dart';
 import 'package:flutter/material.dart';
 
 class DiamondDrawer {
