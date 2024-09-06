@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import '../class/CustomChatShape.dart';
+import '../class/custom_chat_shape.dart';
 
 final Color DEFAULT_COLOR = Colors.cyan.shade900;
 
